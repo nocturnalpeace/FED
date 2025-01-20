@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta name="M.Ziani" content="Mohamed Ziani">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Ask Phil</title>
+	
+	<link rel="stylesheet" href="./styles/style.css">
+	<link rel="icon" type="image/svg+xml" href="images/ident.jpg">
 </head>
-<body>
+<body class="blog">
 
     <header>
 		<nav>
@@ -17,200 +22,421 @@
               <li><a href="">About</a></li>
               <li><a href="blog.html"> blog</a></li>
               <li><a href="">Contact</a></li>
-              
             </ul>
           </nav>
     </header>
 <main>
-    <h1>Ask Phill</h1>
+            <!-- Logo van Ask Phill in SVG formaat -->
+            <svg class="w-20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 77 21" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_2046_2633)">
+              <path
+                d="M5.77975 10.7605V3.77386C5.77975 2.95229 5.38683 2.54485 4.60099 2.54485H3.86584C3.08 2.54485 2.68708 2.95229 2.68708 3.77386V10.7605H5.77975ZM2.69342 21H0V3.60019C0 1.20229 1.07103 0 3.21942 0H5.24741C7.3958 0 8.46683 1.20229 8.46683 3.60019V21H5.77975V13.3053H2.69342V21Z"
+                fill="currentColor"></path>
+              <path
+                d="M16.0217 5.64408V3.80057C16.0217 2.96565 15.6288 2.54485 14.8429 2.54485H14.4246C13.6578 2.54485 13.2776 2.96565 13.2776 3.80057V7.28053C13.2776 7.67462 13.3536 7.93511 13.4994 8.0687C13.7275 8.2624 13.9747 8.43607 14.2282 8.59637L16.7822 10.0324C17.1941 10.2595 17.587 10.5267 17.9609 10.8206C18.2018 10.9943 18.3919 11.2214 18.5186 11.4952C18.6517 11.749 18.7151 12.25 18.7151 12.9847V17.4532C18.7151 19.8111 17.6314 20.9933 15.464 20.9933H13.8036C11.6552 20.9933 10.5841 19.7042 10.5841 17.1326V16.084H13.2712V17.2261C13.2712 18.0477 13.6705 18.4552 14.4753 18.4552H14.957C15.6668 18.4552 16.0217 18.0477 16.0217 17.2261V13.6594C16.0217 13.2719 15.9456 13.0048 15.7935 12.8712C15.5654 12.6775 15.3182 12.4971 15.0647 12.3435L12.5044 10.854C12.0734 10.6269 11.6615 10.3664 11.2686 10.0658C11.0214 9.84542 10.844 9.57156 10.7362 9.24427C10.6158 8.80343 10.5588 8.35592 10.5778 7.90172V3.60019C10.5778 1.20229 11.6488 0 13.7972 0H15.483C17.6314 0 18.7024 1.20229 18.7024 3.60019V5.65076H16.0153L16.0217 5.64408Z"
+                fill="currentColor"></path>
+              <path
+                d="M29.8685 21H27.1751L23.8099 10.7338V10.5668L26.611 0H29.0826L26.2498 10.4399L29.8685 21ZM23.6641 21H20.9707V0H23.6641V21Z"
+                fill="currentColor"></path>
+              <path
+                d="M38.6016 10.8473H40.3127C41.0225 10.8473 41.3774 10.4399 41.3774 9.61832V3.77386C41.3774 2.95229 40.9782 2.54485 40.1733 2.54485H38.6016V10.8473ZM35.9082 0H40.8197C42.9871 0 44.0772 1.20229 44.0772 3.60019V9.82538C44.0772 12.2032 43.0061 13.3922 40.8578 13.3922H38.608V21H35.9145V0H35.9082Z"
+                fill="currentColor"></path>
+              <path d="M52.2145 21V11.4618H48.9063V21H46.2129V0H48.9063V8.91699H52.2145V0H54.9079V21H52.2145Z"
+                fill="currentColor"></path>
+              <path d="M60.1426 0H57.4492V21H60.1426V0Z" fill="currentColor"></path>
+              <path d="M69.0532 21H62.6523V0H65.3458V18.4618H69.0532V21Z" fill="currentColor"></path>
+              <path d="M77.0004 21H70.5996V0H73.293V18.4618H77.0004V21Z" fill="currentColor"></path>
+            </g>
+          </svg>
+    <h2>Knowledge</h2>
 
+
+    <!-- De eerste section -->
     <section>
         <ul>
-            <li><a>all</a></li>
-            <li><a>Shopify</a></li>
-            <li><a>Strategy</a></li>
-            <li><a>NXT Summit</a></li>
-            <li><a>Shopify Plus</a></li>
-            <li><a>Shopify Hydrogen</a></li>
-            <li><a>Headless</a></li>
-            <li><a>Shopify POS</a></li>
-            <li><a>Creative</a></li>
-            <li><a>Headless</a></li>
-    
+            <li>
+                <label>
+                    <input type="radio" value="all" name="filter" checked> all
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" value="Shopify" name="filter"> Shopify
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" value="Strategy" name="filter"> Strategy
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" value="NXT Summit" name="filter"> NXT Summit
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" value="Shopify Plus" name="filter"> Shopify Plus
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" value="Shopify Hydrogen" name="filter"> Shopify Hydrogen
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" value="Headless" name="filter"> Headless
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" value="Shopify POS" name="filter"> Shopify POS
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" value="Creative" name="filter"> Creative
+                </label>
+            </li>
         </ul>
 
-        <a href="https://askphill.com/blogs/blog/nxt-2024-top-talks"></a>
+              
+        <a data-category="NXT Summit" href="https://askphill.com/blogs/blog/nxt-2024-top-talks">
+            <article>  
+                <img src="./images/summit 1.jpeg" alt="foto van NXT conferentie">
+                <p>NXT Summit</p>
+                <h2>The data party isn't over</h2>
+                <p>Filling Pieces journey to data-driven succes with Elevar</p>
+            </article>
+        </a>
+            
+        <a data-category="NXT Summit" href="https://askphill.com/blogs/blog/glossier-nxt-2024">
+            <article>  
+                <img src="./images/nxtconferentie.jpg" alt="conferentie foto 2">
+                <p>NXT Summit</p>
+                <h3>The future of CX</h3>
+                <p>Insights from Glossier's CX playbook</p>
+            </article>
+        </a>
+
+        <a data-category="Shopify" href="https://askphill.com/blogs/blog/shopify-editions-winter-2025">
+            <article>  
+                <img src="./images/Boring_TV_-_Shopify_Winter_25_Editions.png" alt="shopify">
+                <p>Shopify</p>
+                <h3>Shopify Editions Winter '25</h3>
+                <p>The 'Boring'updates your platform actually needs</p>
+            </article>
+        </a>
+
+        <!-- TOGGLE -->
+
+        <section class="Reclame">
+            <h2>Subscribe to receipts,</h2>
+            <h2>Ask Phill's monthly newsletter.</h2>
+            <input type="checkbox" name="Yes">
+        </section>
         
-        <a href="https://askphill.com/blogs/blog/no-code-scale-on-shopify"></a>
-        <a href="https://askphill.com/blogs/blog/bfcm-guide-high-volume-sales-shopify"></a>
+        <a data-category="NXT Summit" href="https://askphill.com/blogs/blog/nxt-2024-top-talks">
+            <article>
+                <img src="./images/summit4.png" alt="nxt summit conferentie foto">
 
-    </section>
+                <p>NXT Summit</p>
+                <h3>Highlights from the NXT:C Summit 2024</h3>
+                <p>Tony's Chocolonely's road to Unified Commerce</p>
+            </article>
+        </a>
 
-    <section>
-        <p>Subscribe to receipts,
-            <br> Ask Phill's monthly newsletter.</br>
+        <a data-category="NXT Summit" href="https://askphill.com/blogs/blog/nxt-2024-top-talks">
+            <article>
+                <img src="./images/summit4.png" alt="nxt summit conferentie foto">
+                    <p>NXT Summit</p>
+                    <h3>Lessons in Loyalty, CX and Unified Commerce</h3>
+                    <p>The top 3 talks from NXT:C Summit 2024</p>
+            </article>
+        </a>
 
-    </p>
-    <p>Yes</p>
-    <a href="https://askphill.com/blogs/blog/nxt-2024-top-talks">
-        <img src=".jpg" alt="Image Description">
-    </a>
-    <a href="https://askphill.com/blogs/blog/nxt-2024-top-talks">
-        <img src=".jpg" alt="Image Description">
-    </a>
-    <a href="https://askphill.com/blogs/blog/nxt-2024-top-talks">
-        <img src=".jpg" alt="Image Description">
-    </a>
-    <a href="https://askphill.com/blogs/blog/nxt-2024-top-talks">
-        <img src=".jpg" alt="Image Description">
-    </a>
-    <a href="https://askphill.com/blogs/blog/nxt-2024-top-talks">
-        <img src=".jpg" alt="Image Description">
-    </a>
-    <a href="https://askphill.com/blogs/blog/nxt-2024-top-talks">
-        <img src=".jpg" alt="Image Description">
-    </a>
+        <a data-category="" href="ttps://askphill.com/blogs/blog/nxt-2024-top-talks"> 
+            <article>
+                <img src="./images/vrouwmetlucky.png" alt="">
+                <h3>No-code, big impact</h3>
+                <p>How Ask Phill helps brands scale on Shopify without the tech hassle</p>
+            </article>
+        </a>
+
+        <a data-category="Strategy" href="ttps://askphill.com/blogs/blog/nxt-2024-top-talks"> 
+            <article>
+                <img src="./images/blackfridaycybermonday.jpg" alt="">
+                <p>Strategy</p>
+                <h3>Black Friday & Cyber Monday</h3>
+                <p>Your ultimate guide to crushing high-volume sales periods</p>
+            </article>
+        </a>
+
+        <a data-category="Creative" href="ttps://askphill.com/blogs/blog/nxt-2024-top-talks">  
+            <article>
+                <img src="./images/functionaldesign.jpg" alt="">
+                <p>Creative</p>
+                <h3>Functional designs:</h3>
+                <p>Balancing brand identity and conversions in ecommerce</p>
+            </article>
+        </a>
+
+        <a data-category="Strategy" href="https://askphill.com/blogs/blog/nxt-2024-top-talks">  
+            <article>
+                <img src="./images/firstpartydata.jpg" alt="">
+                <p>Strategy</p>
+                <h3>First-party data</h3>
+                <p>The key to thriving amidst privacy regulations</p>
+            </article>
+        </a>
 
     </section> 
+    <!-- De 'tweede' section -->
     <section>
         <ul>
-            <li>    <a href="https://askphill.com/blogs/blog/nxt-2024-top-talks">
-                <img src=".jpg" alt="Image Description"></a>
+            <li>    
+                <a href="https://askphill.com/blogs/blog/nxt-2024-top-talks">
+                    <img src="./images/Everything_you_need_to_know_about_B2B_on_Shopify_hero.jpg" alt="Image Description">
+                </a>
+                <p>Shopify</p>
+                <p>Shopify B2B</p>
+                <p>Everything you need to know about B2B on Shopify</p>
             </li>
 
-            <li>    <a href="https://askphill.com/blogs/blog/nxt-2024-top-talks">
-        <img src=".jpg" alt="Image Description">
-                    </a>
-                    <p>Shopify</p>
-                    <p>Shopify B2B</p>
-                    <p>Everything you need to know about B2B on Shopify</p>
+            <li>    
+                <a href="https://askphill.com/blogs/blog/nxt-2024-top-talks">
+                    <img src="./images/Everything-to-know-about-shopify-hydrogen-oxygen.jpg" alt="Image Description">
+                </a>
+                <p>Shopify Hydrogen</p>
+                <p>Hydrogen & Oxygen</p>
+                <p>Everything you need to know about Shopify Hydrogen and Oxygen</p>
             </li>
-            <li>    <a href="https://askphill.com/blogs/blog/nxt-2024-top-talks">
-                <img src=".jpg" alt="Image Description">
-                            </a>
-                    <p>Shopify Hydrogen</p>
-                    <p>Hydrogen & Oxygen</p>
-                    <p>Everything you need to know about Shopify Hydrogen and Oxygen</p>
-                    </li>
-            <li>    <a href="https://askphill.com/blogs/blog/nxt-2024-top-talks">
-                        <img src=".jpg" alt="Image Description">
-                                    </a>
-                    <p>Shopify POS</p>
-                    <p>Shopify POS</p>
-                    <p>Everything you need to know about Shopify POS</p>
+
+            <li>    
+                <a href="https://askphill.com/blogs/blog/nxt-2024-top-talks">
+                    <img src="./images/everything_you_need_to_know_about_shopify_pos (2).jpg" alt="Image Description">
+                </a>
+                <p>Shopify POS</p>
+                <p>Shopify POS</p>
+                <p>Everything you need to know about Shopify POS</p>
             </li>
         </ul>
 
     </section>
 
-    <section>
+    <!-- De derde section -->
+
+    
+    <section class="more-knowlegde">
+                    <a href="https://askphill.com/blogs/blog/nxt-2024-top-talks">
+                    <img src="/images/nxtconferentie.jpg alt=" alt="image description">
+                    <div> 
+                    <h3>Lessons in loyalty, CX and Unified Commerce</h3>
+                    <p>The top 3 talks from NXT:C Summit 2024</p>
+                    </div>
+                    </a>
+        <h2>More knowledge</h2>
         <ul>
             <li>
                 <a href="https://askphill.com/blogs/blog/nxt-2024-top-talks">
-                    <img src=".jpg" alt="Image Description">        
+                    <article>
+                    <img src="/images/nxtconferentie.jpg" alt="Image Description">   
+                    <p>NXT Summit</p>     
                     <p>Lessons in loyalty, CX and Unified Commerce</p>
                     <p>The top 3 talks from NXT:C Summit 2024</p>
-                    <p><span>NXT Summit</span></p>
+                    </article>
             </li>
             <li>
                 <a href="https://askphill.com/blogs/blog/nxt-2024-top-talks">
-                    <img src=".jpg" alt="Image Description">        
+                    <img src="/images/vrouwmetlucky.png" alt="Image Description"> 
+                    <article>
+                    <p>Headless</p>       
                     <p>No-code, big impact</p>
                     <p>How Ask Phill helps brands scale on Shopify without the tech hassle</p>
-                    <p><span></span></p>
+                    </article>
             </li>
             <li>
                 <a href="https://askphill.com/blogs/blog/nxt-2024-top-talks">
-                    <img src=".jpg" alt="Image Description">        
+                    <img src="./images/blackfridaycybermonday.jpg" alt="Image Description">  
+                    <article>
+                    <p>Strategy</p>
                     <p>Black Friday & Cyber Monday</p>
                     <p>Your ultimate guide to crushing high-volume sales periods</p>
-                    <p><span>Strategy</span></p>
+                    </article>
             </li>
             <li>
                 <a href="https://askphill.com/blogs/blog/nxt-2024-top-talks">
-                    <img src=".jpg" alt="Image Description">        
+                    <article>
+                    <img src="/images/functionaldesign.jpg" alt="Image Description">    
+                    <p>Creative</p>    
                     <p>Functional designs:</p>
                     <p>Balancing brand identity and conversions in ecommerce</p>
-                    <p><span>Creative</span></p>
+                    </article>
             </li>
             <li>
                 <a href="https://askphill.com/blogs/blog/nxt-2024-top-talks">
-                    <img src=".jpg" alt="Image Description">        
+                    <article>
+                    <img src="/images/firstpartydata.jpg" alt="Image Description">    
+                    <p>Strategy</p>    
                     <p>First-party data</p>
                     <p>The key to thriving amidst privacy regulations</p>
-                    <p><span>Strategy</span></p>
+                    </article>
             </li>
             <li>
                 <a href="https://askphill.com/blogs/blog/nxt-2024-top-talks">
-                    <img src=".jpg" alt="Image Description">        
+                    <article>
+                    <img src="./images/Shopify-editions-summer-24-Unified-photo-article-1.png" alt="Image Description">        
                     <p>Shopify Editions Summer '24:</p>
                     <p>Ask Phill leaders discuss the latest updates</p>
-                    <p><span>Shopify</span></p>
+                    <p>Shopify</p>
+                    </article>
             </li>
             <li>
                 <a href="https://askphill.com/blogs/blog/nxt-2024-top-talks">
-                    <img src=".jpg" alt="Image Description">        
+                    <article>
+                    <img src="./images/askphill&friends.png" alt="vrouw bij zonsondergang">        
                     <p>Ask Phill & Friends with Klaviyo</p>
                     <p>The recipe for retention success</p>
-                    <p><span>Strategy</span></p>
+                    <p>Strategy</p>
+                    </article>
+
+            </li>
+            <li>
+                <a data-category="Strategy" href="https://askphill.com/blogs/blog/nxt-2024-top-talks">  
+                    <article>
+                        <img src="./images/scalingwithshopify.jpg" alt="">
+                        <p>Shopify Plus</p>
+                        <h3>Scaling with Shopify</h3>
+                        <p>No-Code simplicity versus Custom-Code complexity</p>
+                    </article>
+                </a>
             </li>
             <li>
                 <a href="https://askphill.com/blogs/blog/nxt-2024-top-talks">
-                    <img src=".jpg" alt="Image Description">        
-                    <p>Scaling with Shopify </p>
-                    <p>no-code simplicity versus no-code Custom-Code complexity</p>
-                    <p><span>Shopify Plus</span></p>
-            </li>
-            <li>
-                <a href="https://askphill.com/blogs/blog/nxt-2024-top-talks">
-                    <img src=".jpg" alt="Image Description">        
+                    <article>
+                    <img src="/images/shopify-updates-winter-_24-cover.jpg" alt="Image Description">        
                     <p>Laying down the foundations</p>
                     <p>Shopify Editions Winter '24: Essential updates for Shopify Plus merchants</p>
-                    <p><span>Shopify</span></p>
+                    <p>Shopify</p>
+                    </article>
             </li>
             <li>
                 <a href="https://askphill.com/blogs/blog/nxt-2024-top-talks">
-                    <img src=".jpg" alt="Image Description">        
+                    <article>
+                    <img src="./images/rethinking-headless-commerce-article-ask-phill-cover-3.jpg" alt="Image Description">  
+                    <p>Headless</p>      
                     <p>Rethinking Headless commerce</p>
                     <p>Rediscovering Shopify's power </p>
-                    <p><span>Headless</span></p>
+                    </article>
+            </li>
+            <li class="test">
+                <a href="#">
+                    <img src="./images/rethinking-headless-commerce-article-ask-phill-cover-3.jpg" alt="">
+                    <div>
+                        <h4>Rethinking Headless commerce</h4>
+                        <p>Rediscovering Shopify's power</p>
+                    </div>
+                    <p class="testp">Headless</p>
+                </a>
             </li>
             <li>
                 <a href="https://askphill.com/blogs/blog/nxt-2024-top-talks">
-                    <img src=".jpg" alt="Image Description">        
+                    <article>
+                    <img src="./images/d2c-summit-2023-ask-phill-thumbnail_1.jpeg" alt="nike schoenen">
+                    <p>NXT Summit</p>        
                     <p>Beyond the products</p>
                     <p>Ask Phill's take on the streetwear drop that's got everyone talking</p>
-                    <p><span>NXT Summit</span></p>
+                    </article>
             </li>
             <li>
-                <a href="https://askphill.com/blogs/blog/nxt-2024-top-talks">
-                    <img src=".jpg" alt="Image Description">        
-                    <p>Gear up for loyalty</p>
+                <a data-category="NXT Summit" href="https://askphill.com/blogs/blog/nxt-2024-top-talks">  
+                    <article>
+                    <img src="./images/yotpo-Ekster-presentation-photo-__1.jpeg" alt="Image Description">        
+                    <p>NXT Summit</p>
+                    <h3>Gear up for loyalty</h3>
                     <p>How Ekster rewrites the rules of customer retention</p>
-                    <p><span>NXT Summit</span></p>
+                    </article>
             </li>
             <li>
-                <a href="https://askphill.com/blogs/blog/nxt-2024-top-talks">
-                    <img src=".jpg" alt="Image Description">        
-                    <p>The streets are talking - Patta's rise.</p>
-                    <p>How Patta leverages the power of community to make it happen</p>
-                    <p><span>NXT Summit</span></p>
-            </li>
-            <li>
-                <a href="https://askphill.com/blogs/blog/nxt-2024-top-talks">
-                    <img src=".jpg" alt="Image Description">        
-                    <p>Comparing Shopify</p>
-                    <p>Shopify Plus vs. Salesforce Commerce Cloud</p>
-                    <p><span>Shopify</span></p>
+                <a data-category="NXT Summit" href="https://askphill.com/blogs/blog/nxt-2024-top-talks">  
+                    <article>
+                        <img src="./images/shopify-patta-photo2.jpg" alt="lezing patta">
+                        <p>NXT Summit</p>
+                        <h3>The streets are talking - Patta's rise.</h3>
+                        <p>How Patta leverages the power of community to make it happen</p>
+                    </article>
+                </a>
             </li>
         </ul>
 
         <button></button>
 
     </section>
+
+    <section class="ready">
+		<p>Are you ready to</p>
+		<p>work with us?</p>
+
+		<input type="checkbox">
+
+		<p>Yes</p>
+		<p>Yes</p>
+	</section>
     
 </main>
+
+
+<footer>
+    <ul>
+        <li>Our work</li>
+        <li>expertise</li>
+        <li>About</li>
+        <li>Blog</li>
+        <li>Contact</li>
+        <li>Careers</li>
+    </ul>
+
+    <p>Amsterdam</p>
+
+    <a>'s-Gravenhekje 1a 1011 TG Amsterdam The Netherlands </a>
+
+    <ul>
+        <li>
+            <svg xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.4444 0C12.857 0 13.2527 0.163888 13.5444 0.455612C13.8361 0.747335 14 1.143 14 1.55556V12.4444C14 12.857 13.8361 13.2527 13.5444 13.5444C13.2527 13.8361 12.857 14 12.4444 14H1.55556C1.143 14 0.747335 13.8361 0.455612 13.5444C0.163888 13.2527 0 12.857 0 12.4444V1.55556C0 1.143 0.163888 0.747335 0.455612 0.455612C0.747335 0.163888 1.143 0 1.55556 0H12.4444ZM12.0556 12.0556V7.93333C12.0556 7.26086 11.7884 6.61593 11.3129 6.14042C10.8374 5.66492 10.1925 5.39778 9.52 5.39778C8.85889 5.39778 8.08889 5.80222 7.71556 6.40889V5.54556H5.54556V12.0556H7.71556V8.22111C7.71556 7.62222 8.19778 7.13222 8.79667 7.13222C9.08546 7.13222 9.36242 7.24694 9.56663 7.45115C9.77083 7.65536 9.88556 7.93232 9.88556 8.22111V12.0556H12.0556ZM3.01778 4.32444C3.36433 4.32444 3.69668 4.18678 3.94173 3.94173C4.18678 3.69668 4.32444 3.36433 4.32444 3.01778C4.32444 2.29444 3.74111 1.70333 3.01778 1.70333C2.66917 1.70333 2.33483 1.84182 2.08833 2.08833C1.84182 2.33483 1.70333 2.66917 1.70333 3.01778C1.70333 3.74111 2.29444 4.32444 3.01778 4.32444ZM4.09889 12.0556V5.54556H1.94444V12.0556H4.09889Z" fill="white"/>
+              </svg>
+        </li>
+        <li>
+            <svg xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.06 0H9.94C12.18 0 14 1.82 14 4.06V9.94C14 11.0168 13.5723 12.0495 12.8109 12.8109C12.0495 13.5723 11.0168 14 9.94 14H4.06C1.82 14 0 12.18 0 9.94V4.06C0 2.98322 0.427749 1.95054 1.18915 1.18915C1.95054 0.427749 2.98322 0 4.06 0ZM3.92 1.4C3.25165 1.4 2.61068 1.6655 2.13809 2.13809C1.6655 2.61068 1.4 3.25165 1.4 3.92V10.08C1.4 11.473 2.527 12.6 3.92 12.6H10.08C10.7483 12.6 11.3893 12.3345 11.8619 11.8619C12.3345 11.3893 12.6 10.7483 12.6 10.08V3.92C12.6 2.527 11.473 1.4 10.08 1.4H3.92ZM10.675 2.45C10.9071 2.45 11.1296 2.54219 11.2937 2.70628C11.4578 2.87038 11.55 3.09294 11.55 3.325C11.55 3.55706 11.4578 3.77962 11.2937 3.94372C11.1296 4.10781 10.9071 4.2 10.675 4.2C10.4429 4.2 10.2204 4.10781 10.0563 3.94372C9.89219 3.77962 9.8 3.55706 9.8 3.325C9.8 3.09294 9.89219 2.87038 10.0563 2.70628C10.2204 2.54219 10.4429 2.45 10.675 2.45ZM7 3.5C7.92826 3.5 8.8185 3.86875 9.47487 4.52513C10.1313 5.1815 10.5 6.07174 10.5 7C10.5 7.92826 10.1313 8.8185 9.47487 9.47487C8.8185 10.1313 7.92826 10.5 7 10.5C6.07174 10.5 5.1815 10.1313 4.52513 9.47487C3.86875 8.8185 3.5 7.92826 3.5 7C3.5 6.07174 3.86875 5.1815 4.52513 4.52513C5.1815 3.86875 6.07174 3.5 7 3.5ZM7 4.9C6.44305 4.9 5.9089 5.12125 5.51508 5.51508C5.12125 5.9089 4.9 6.44305 4.9 7C4.9 7.55695 5.12125 8.0911 5.51508 8.48492C5.9089 8.87875 6.44305 9.1 7 9.1C7.55695 9.1 8.0911 8.87875 8.48492 8.48492C8.87875 8.0911 9.1 7.55695 9.1 7C9.1 6.44305 8.87875 5.9089 8.48492 5.51508C8.0911 5.12125 7.55695 4.9 7 4.9Z" fill="white"/>
+            </svg>
+        </li>
+        <li>
+            <svg xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 0C6.08075 0 5.17049 0.18106 4.32122 0.532843C3.47194 0.884626 2.70026 1.40024 2.05025 2.05025C0.737498 3.36301 0 5.14348 0 7C0 10.094 2.009 12.719 4.788 13.65C5.138 13.706 5.25 13.489 5.25 13.3V12.117C3.311 12.537 2.898 11.179 2.898 11.179C2.576 10.367 2.121 10.15 2.121 10.15C1.484 9.716 2.17 9.73 2.17 9.73C2.87 9.779 3.241 10.451 3.241 10.451C3.85 11.515 4.879 11.2 5.278 11.032C5.341 10.577 5.523 10.269 5.719 10.094C4.165 9.919 2.534 9.317 2.534 6.65C2.534 5.873 2.8 5.25 3.255 4.753C3.185 4.578 2.94 3.85 3.325 2.905C3.325 2.905 3.913 2.716 5.25 3.619C5.803 3.465 6.405 3.388 7 3.388C7.595 3.388 8.197 3.465 8.75 3.619C10.087 2.716 10.675 2.905 10.675 2.905C11.06 3.85 10.815 4.578 10.745 4.753C11.2 5.25 11.466 5.873 11.466 6.65C11.466 9.324 9.828 9.912 8.267 10.087C8.519 10.304 8.75 10.731 8.75 11.382V13.3C8.75 13.489 8.862 13.713 9.219 13.65C11.998 12.712 14 10.094 14 7C14 6.08075 13.8189 5.17049 13.4672 4.32122C13.1154 3.47194 12.5998 2.70026 11.9497 2.05025C11.2997 1.40024 10.5281 0.884626 9.67878 0.532843C8.82951 0.18106 7.91925 0 7 0Z" fill="white"/>
+            </svg>
+        </li>
+    </ul>
+
     
+    <ul>
+        <li><a>Privacy Policy</a></li>
+        <li><a>Cookie Policy</a></li>
+        <li><a>Terms & Conditions</a></li>
+    </ul>
     
+
+    <ul>
+        <li><a>Strategy</a></li>
+        <li><a>Creative</a></li>
+        <li><a>Technology</a></li>
+    </ul>
+
+    <p>© 2024 Ask Phill. All rights reserved</p>
+</footer>
+
+    <script defer src="scripts/script.js"></script>
 </body>
 </html>
