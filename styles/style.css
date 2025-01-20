@@ -1,43 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 /**************/
 /* CSS REMEDY */
 /**************/
 
 
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
+*, *::after, *::before {
+  box-sizing:border-box;  
 }
 
 @font-face {
-  font-family: "askphill-font";
-  src: url("../assets/Inter-Bold.woff2");
+	font-family: "askphill-font";
+	src: url("../assets/Inter-Bold.woff2");
 }
 
 
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
 :root {
-  --beige-phill: rgb(216 204 181);
-  /* Specifieke beige kleur, gebruikt voor achtergronden */
-  --phill-font: "Inter";
-  /* Standaard lettertype voor de site */
-  --shopify-green: #95BF46;
+	/* startje */
+	--color-text:#111;
+	--color-background:#eee;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-a {
-  margin: 0;
-  /* Verwijder standaard marges */
-  font-family: var(--phill-font);
-  /* Toepassing van het standaard lettertype */
-}
 
+
+
+h1, h2, h3, h4 {
+	margin: 0;
+}
 
 
 /****************/
@@ -45,1998 +37,264 @@ a {
 /****************/
 
 body {
-  margin: 0;
-  font-family: "askphill-font";
+	margin:0;
+	font-family: "askphill-font";
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
+}
+  
+header {
+	background-color:gold;
 }
 
 img {
-  width: 100%;
+	width: 100%;
 }
 
 ul {
-  padding: 0;
+	padding: 0;
 }
 
 li {
-  list-style-type: none;
+	list-style-type: none;
 }
-
+  
 header nav {
-  background-color: red;
-  z-index: 10;
-  position: fixed;
-  bottom: 2em;
-  left: 50%;
-  translate: -50%;
-  border-radius: 2rem;
+	background-color:red;
+	z-index: 10;
+	position:fixed;
+	bottom:2em;
+	left:50%;
+	translate:-50%;
+	border-radius: 2rem;
+	
+	display:flex;
+	flex-direction:column-reverse;
+  }
 
-  display: flex;
-  flex-direction: column-reverse;
-}
+  header nav button {
+	background-color: red;
+	color: white;
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	border-radius: 2rem;
+	padding: .5rem;
+	overflow: hidden;
+  }
 
-header nav button {
-  background-color: red;
-  color: white;
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  border-radius: 2rem;
-  padding: .5rem;
-  overflow: hidden;
-  border: none;
-}
+  header nav button img {
+	width: 40%;
+	background-color: white;
+	padding: .5rem;
+	border-radius: 2rem;
 
-header nav button img {
-  width: 40%;
-  background-color: white;
-  padding: .5rem;
-  border-radius: 2rem;
+  }
+  
+  header nav ul {
+	display: none;
+	border-radius: 2rem;
+  }
 
-}
+  header nav ul li a {
+	color: white;
 
-header nav ul {
-  display: none;
-  border-radius: 2rem;
-}
-
-header nav ul li a {
-  color: white;
-
-}
-
-header nav.openMenu ul {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  transition: .5s;
-  gap: 2rem;
-}
+  }
+  
+  header nav.openMenu ul  {
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+	transition: .5s;
+	gap: 2rem;
+  } 
 
 
-body main section:nth-of-type(2) {
-  background-color: #D8CBB4;
-}
+  body main section:nth-of-type(2){
+	background-color: #D8CBB4;
+  }
 
 /****************/
-/* 1e PAGINA SECTIONS */
+/* SECTIONS */
 /****************/
 
 
-/* Algemene stijl voor secties in de main-tag */
 main section {
-  height: 100vh;
-  /* Sectie vult de volledige hoogte van het scherm */
-  width: 100%;
-  /* Breedte van 100% van de viewport */
-  position: relative;
-  /* Voor positionering van kind-elementen binnen de sectie */
-  box-sizing: border-box;
-
-  overflow-x: clip;
+	display: flex;
+	flex-direction: column;
 }
 
-/* Stijlen voor de video in de eerste sectie */
-main section:nth-of-type(1) video {
-  width: 100%;
-  /* Video vult de volledige breedte */
-  height: 100%;
-  /* Video vult de volledige hoogte */
-  object-fit: cover;
-  /* Zorgt dat de video wordt bijgesneden om de container te vullen */
-  position: absolute;
-  /* Overlapt andere elementen binnen de sectie */
-}
-
-/* Stijlen voor het SVG-logo in de eerste sectie */
 main section:nth-of-type(1) svg {
-  position: absolute;
-  /* Positionering binnen de sectie */
-  z-index: 1;
-  /* Zorgt ervoor dat het logo boven de video wordt weergegeven */
-  width: 6rem;
-  /* Breedte van het logo */
-  top: 2rem;
-  /* Afstand vanaf de bovenkant van de sectie */
-  left: 50%;
-  /* Horizontale centrering */
-  transform: translateX(-50%);
-  /* Precisiecentrering met translate */
-  text-align: center;
-}
-
-/*-------------*/
-/*- SECTION 2 -*/
-/*-------------*/
-
-/* Tweede sectie met een beige achtergrond en gecentreerde inhoud */
-main section:nth-of-type(2) {
-  background-color: var(--beige-phill);
-  /* Beige achtergrondkleur */
-  display: flex;
-  /* Flexbox voor lay-out */
-  align-items: center;
-  /* Centreer inhoud verticaal */
-  justify-content: center;
-  /* Centreer inhoud horizontaal */
-
-  height: 120vh;
-}
-
-/* Titelstijl in de tweede sectie */
-main section:nth-of-type(2) h2 {
-  color: black;
-  width: 100%;
-  /* Titel vult de breedte */
-  text-align: center;
-  margin: 0 3rem;
-  /* Horizontale marges */
-  font-size: 2rem;
-  font-family: var(--phill-font);
-}
+	position: absolute; /* Positie binnen de sectie */
+	z-index: 1; /*logo boven de video wordt weergegeven */
+	width: 5rem; /* Breedte van het logo */
+	top: 2rem; /* Afstand vanaf de bovenkant van de sectie */
+	left: 50%; /* Horizontale centrering */
+	transform: translateX(-50%); /* Precisie centreren met translate */
+	text-align: center;
+  }
 
 /* Specifieke stijl voor <strong> binnen de h2-titel */
 main section:nth-of-type(2) h2 strong {
-  color: rgb(250 248 247);
-  /* Specifieke lichtere kleur voor de nadruk */
+	color: rgb(250 248 247); /* Specifieke lichtere kleur voor de nadruk */
+  }
+
+
+
+
+main section:nth-of-type(1) video {
+	width: 100%;
 }
 
-/* Algemene positionering van divs binnen de tweede sectie */
-main section:nth-of-type(2) div {
-  position: absolute;
-  /* Absolute positionering binnen de sectie */
-}
-
-/* Specifieke positionering van de eerste div in de tweede sectie */
-main section:nth-of-type(2) div:nth-of-type(1) {
-  top: 2rem;
-  /* Afstand vanaf de bovenkant */
-  left: 2rem;
-  /* Afstand vanaf de linkerkant */
-  padding: 1rem;
-  /* Interne opvulling */
-  border-radius: 1rem;
-  /* Afgeronde hoeken */
-  background-color: whitesmoke;
-  /* Lichtgrijze achtergrondkleur */
-}
-
-/* Stijlen voor de lijst binnen de eerste div */
-main section:nth-of-type(2) div:nth-of-type(1) ul {
-  display: flex;
-  /* Lijstitems naast elkaar weergeven */
-  gap: .5rem;
-  /* Ruimte tussen de items */
-}
-
-/* Stijlen voor individuele lijstitems */
-main section:nth-of-type(2) div:nth-of-type(1) ul li {
-  aspect-ratio: 1/1;
-  /* Vierkante vorm */
-  width: 2rem;
-  /* Breedte (en hoogte vanwege aspect-ratio) */
-  background-color: #D8CCb5;
-  /* Beige kleur voor de staven */
-  border-radius: .5rem;
-  /* Afgeronde hoeken */
-  margin-top: auto;
-  /* Zet staven onderaan in de flex-container */
-}
-
-/* Specifieke hoogtes voor de verschillende staven in de lijst */
-main section:nth-of-type(2) div:nth-of-type(1) ul li:nth-of-type(1) {
-  height: 2rem;
-  /* Hoogte van de eerste staaf */
-}
-
-main section:nth-of-type(2) div:nth-of-type(1) ul li:nth-of-type(2) {
-  height: 3rem;
-  /* Hoogte van de tweede staaf */
-}
-
-main section:nth-of-type(2) div:nth-of-type(1) ul li:nth-of-type(3) {
-  height: 2.6rem;
-  /* Hoogte van de derde staaf */
-}
-
-/* Specifieke stijl voor de laatste staaf */
-main section:nth-of-type(2) div:nth-of-type(1) ul li:last-of-type {
-  background-color: #b09769;
-  /* Donkerdere beige kleur */
-  height: 4rem;
-  /* Hoogste staaf */
-}
-
-/* Stijl voor de subtitel (h6) binnen de eerste div */
-main section:nth-of-type(2) div:nth-of-type(1) h6 {
-  font-size: 2rem;
-  /* Grotere tekst */
-}
-
-/* Tweede div in de tweede sectie, gepositioneerd rechts */
-main section:nth-of-type(2) div:nth-of-type(2) {
-  right: 2rem;
-  /* Plaats de div 2rem van de rechterrand */
-  background-color: white;
-  /* Witte achtergrondkleur */
-  padding: 1rem;
-  /* Interne opvulling van 1rem */
-  border-radius: 1rem;
-  /* Afgeronde hoeken */
-  top: 15rem;
-  /* Plaatsing 14rem vanaf de bovenkant */
-}
-
-/* Stijlen voor de h3 in de tweede div */
-main section:nth-of-type(2) div:nth-of-type(2) h3 {
-  display: flex;
-  /* Flexbox lay-out voor de inhoud */
-  align-items: center;
-  /* Centreer items verticaal */
-  justify-content: center;
-  /* Centreer items horizontaal */
-  gap: .5rem;
-  /* Ruimte van .5rem tussen items */
-}
-
-/* Specifieke stijl voor een icoon (i) binnen h3 */
-main section:nth-of-type(2) div:nth-of-type(2) h3 i {
-  background-color: black;
-  /* Zwarte achtergrondkleur voor het icoon */
-  aspect-ratio: 1/1;
-  /* Vierkante vorm */
-  width: 1.5rem;
-  /* Breedte (en hoogte) van 1.5rem */
-  border-radius: 3rem;
-  /* Cirkelvorm door ronde hoeken */
-  color: white;
-  /* Witte tekstkleur */
-  font-size: .7rem;
-  /* Kleine tekstgrootte */
-  text-align: center;
-  /* Centreer tekst in de cirkel */
-  display: flex;
-  /* Flexbox binnen de cirkel */
-  align-items: center;
-  /* Centreer tekst verticaal */
-  justify-content: center;
-  /* Centreer tekst horizontaal */
-}
-
-/* Tekstgrootte van de h3 binnen de tweede div */
-main section:nth-of-type(2) div:nth-of-type(2) h3 {
-  font-size: .7rem;
-  /* Kleine tekst */
-}
-
-/* Tekstgrootte van de h4 binnen de tweede div */
-main section:nth-of-type(2) div:nth-of-type(2) h4 {
-  font-size: 1.5rem;
-  /* Grotere tekstgrootte */
-}
-
-/* Stijlen die van toepassing zijn op zowel de derde als de vierde div */
-main section:nth-of-type(2) div:nth-of-type(3),
-main section:nth-of-type(2) div:nth-of-type(4) {
-  aspect-ratio: 1/1;
-  /* Vierkante vorm */
-  background-color: white;
-  /* Witte achtergrondkleur */
-  width: 10rem;
-  /* Breedte (en hoogte) van 10rem */
-  border-radius: 1rem;
-  /* Afgeronde hoeken */
-  padding: 1rem;
-  /* Interne opvulling */
-  display: flex;
-  /* Flexbox lay-out */
-  flex-direction: column;
-  /* Stapel elementen verticaal */
-}
-
-/* Specifieke stijlen voor de derde div */
-main section:nth-of-type(2) div:nth-of-type(3) {
-  justify-content: space-between;
-  /* Verdeel ruimte gelijkmatig tussen kinderen */
-  left: 1rem;
-  /* Plaatsing 1rem vanaf de linkerrand */
-  bottom: 10rem;
-  /* Plaatsing 8rem vanaf de onderrand */
-  background-image: url("/images/shoe.webp");
-  /* Achtergrondafbeelding */
-  background-size: 70%;
-  /* Afbeelding bedekt 70% van de container */
-  background-position: center;
-  /* Centreer de afbeelding */
-  background-repeat: no-repeat;
-  /* Geen herhaling van de afbeelding */
-}
-
-/* Tekst binnen de derde div */
-main section:nth-of-type(2) div:nth-of-type(3) p {
-  display: flex;
-  /* Flexbox voor de paragraafinhoud */
-  font-size: .8rem;
-  /* Kleinere tekst */
-  justify-content: space-between;
-  /* Verdeel inhoud gelijkmatig */
-}
-
-/* Specifieke stijlen voor de vijfde div */
-main section:nth-of-type(2) div:nth-of-type(4) {
-  right: 1rem;
-  /* Plaatsing 1rem vanaf de rechterrand */
-  bottom: 1rem;
-  /* Plaatsing 2rem vanaf de onderrand */
-  background-image: url("/images/shopify-checkout-best-in-world-1.png");
-  /* Achtergrondafbeelding */
-  background-size: cover;
-  /* Afbeelding vult de container volledig */
-}
-
-/* Specifieke lay-outinstellingen voor de vijfde div */
-main section:nth-of-type(2) div:nth-of-type(4) {
-  justify-content: flex-end;
-  /* Plaats de inhoud aan de onderkant */
-  color: white;
-  /* Witte tekstkleur voor de inhoud */
-}
-
-/* Specifieke stijlen voor de h3 binnen de vijfde div */
-main section:nth-of-type(2) div:nth-of-type(4) h3 {
-  font-weight: 300;
-  /* Dunne tekst */
-  font-size: .8rem;
-  /* Kleine tekst */
-}
-
-/****************/
-/* 1e PAGINA SECTION 3 */
-/****************/
-
-/* Derde section met flexbox-indeling */
-main section:nth-of-type(3) {
-  display: flex;
-  /* Gebruik flexbox voor lay-out */
-  height: fit-content;
-  /* De hoogte past zich aan de inhoud aan */
-  flex-direction: column;
-  /* Stapel kinderen verticaal */
-  justify-content: space-between;
-  /* Verdeel ruimte tussen de kinderen */
-}
-
-/* Div's binnen de derde sectie */
-main section:nth-of-type(3)>div {
-  display: flex;
-  /* Flexbox voor kinderen */
-  flex-direction: column;
-  /* Stapel kinderen verticaal */
-  width: 100%;
-  /* Volledige breedte */
-  margin: 4rem 0;
-  /* Verticale marge van 4rem */
-  align-items: center;
-  /* Centreer kinderen horizontaal */
-}
-
-/* Koptekst binnen de div's */
-main section:nth-of-type(3)>div h3 {
-  font-size: 2.4rem;
-  /* Grotere tekst voor kopteksten */
-}
-
-/* Knoppen (links) binnen de div's */
-main section:nth-of-type(3)>div a {
-  background-color: #d6ccb7;
-  /* Beige achtergrondkleur */
-  padding: .5rem 1rem;
-  /* Ruimte binnen de knop */
-  border-radius: 2rem;
-  /* Afgeronde hoeken */
-  font-size: .8rem;
-  /* Kleine tekstgrootte */
-  color: black;
-  /* Zwarte tekstkleur */
-  margin: 5rem 0;
-  /* Verticale marge van 1rem */
-}
-
-/* Lijst met kaarten in de derde sectie */
-main section:nth-of-type(3) ul {
-  padding: 1rem;
-  /* Interne opvulling */
-  margin: auto;
-  /* Centreer de lijst horizontaal */
-  position: relative;
-  /* Maakt specifieke positionering mogelijk */
-  height: 65vh;
-  /* Hoogte van 65% van de viewport */
-  box-sizing: border-box;
-  /* Inclusief padding en border in totale breedte/hoogte */
-}
-
-/* Algemene stijl voor de kaarten in de lijst */
-main section:nth-of-type(3) ul li {
-  position: relative;
-  /* Maakt gebruik van relatieve positionering */
-  display: flex;
-  /* Flexbox binnen elk kaartitem */
-  flex-direction: row;
-  /* Elementen naast elkaar plaatsen */
-  gap: 1rem;
-  /* Ruimte van 1rem tussen elementen */
-  padding: 1rem;
-  /* Ruimte binnen het kaartje */
-  border-radius: 1rem;
-  /* Afgeronde hoeken */
-  box-sizing: border-box;
-  /* Inclusief padding in breedte/hoogte */
-  transition: transform 0.3s ease;
-  /* Animatie voor verplaatsingen */
-}
-
-/* Filing pieces in de lijst */
-main section:nth-of-type(3) ul li:nth-of-type(1) {
-  background-color: gainsboro;
-  /* Lichtgrijze achtergrondkleur */
-  transform: translateY(-6rem);
-  /* Verschuiving naar boven met 30rem */
-  color: rgb(111, 67, 67);
-  /* Bruinachtige tekstkleur */
-  z-index: 1;
-  /* Laagste z-index, achter de andere kaarten */
-}
-
-/* MR Marvis in de lijst */
-main section:nth-of-type(3) ul li:nth-of-type(2) {
-  background-color: goldenrod;
-  /* Goudgele achtergrondkleur */
-  transform: translateY(-15rem);
-  /* Verschuiving naar boven met 15rem */
-  z-index: 2;
-  /* Middelste laag */
-}
-
-/* Tony chocolonely kaart in de lijst */
-main section:nth-of-type(3) ul li:nth-of-type(3) {
-  background-color: ghostwhite;
-  /* Witte achtergrondkleur */
-  transform: translateY(-28rem);
-  /* Verschuiving naar boven met 30rem */
-  z-index: 3;
-  /* Hoogste laag */
-}
-
-/* Kopteksten binnen de kaarten */
-main section:nth-of-type(3) ul li h4 {
-  font-size: 1.5rem;
-  /* Grotere tekstgrootte */
-  width: 100%;
-  /* Tekst vult de volledige breedte */
-}
-
-/* Afbeeldingen binnen de kaarten */
 main section:nth-of-type(3) ul li img {
-  width: 50%;
-  /* Afbeeldingen nemen 50% van de kaartbreedte in */
-  height: auto;
-  /* Behoudt de originele verhoudingen */
-  border-radius: 1rem;
-  /* Afgeronde hoeken */
+	width: 50%;
+	height: 200px;
+	object-fit: cover;
 }
 
-/* Div binnen de kaarten */
+main section:nth-of-type(3) ul {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 1rem;
+	position: relative;
+	height: 23rem;
+	gap: 1rem;
+}
+
+
+main section:nth-of-type(3) ul li {
+
+	background-color: whitesmoke;
+	padding: 1rem;
+	display: flex;
+	gap: 1rem;
+	position: absolute;
+	width: 21em;
+}
+
+
+main section:nth-of-type(3) ul li:nth-of-type(2) {
+	bottom: 3.5rem;
+}
+main section:nth-of-type(3) ul li:nth-of-type(3) {
+	bottom: 0;
+}
+
+/****************/
+/* DIV IN SECTIONS */
+/****************/
+
+main section:nth-of-type(2) div:nth-of-type(1) {
+	top: 2rem; /* Afstand vanaf de bovenkant */
+	left: 2rem; /* Afstand vanaf de linkerkant */
+	padding: 1rem; /* Interne opvulling */
+	border-radius: 1rem; /* Afgeronde hoeken */
+	background-color: whitesmoke; /* Lichtgrijze achtergrondkleur */
+  }
+
 main section:nth-of-type(3) ul li div {
-  display: flex;
-  /* Flexbox lay-out */
-  flex-direction: column;
-  /* Stapel elementen verticaal */
-  justify-content: space-between;
-  /* Verdeel ruimte gelijkmatig */
+	display: flex;
+	flex-direction: column;
 }
 
-/* Knoppen binnen de kaarten */
 main section:nth-of-type(3) ul li div button {
-  width: fit-content;
-  /* Breedte past zich aan de inhoud aan */
-  border: none;
-  /* Geen rand */
-  background-color: #0066cb;
-  /* Blauw als achtergrondkleur */
-  color: black;
-  padding: .5rem;
-  /* Interne opvulling */
-  font-size: .7rem;
-  /* Kleinere tekst */
-  border-radius: 2rem;
-  /* Afgeronde hoeken */
-}
-
-
-/****************/
-/* 1E PAGINA SECTION 4 */
-/****************/
-
-/* Vierde section */
-main section:nth-of-type(4) {
-  height: fit-content;
-  /* De hoogte wordt automatisch aangepast aan de inhoud van de sectie */
-  padding: 3rem 1rem;
-  /* Binnenmarges van 3rem aan de boven- en onderkant en 1rem aan de zijkanten */
-  justify-content: center;
-  /* Centraal uitlijnen van de inhoud langs de hoofdas (verticale as bij flex-direction column) */
-  display: flex;
-  /* Flexbox wordt gebruikt voor de lay-out */
-  flex-direction: column;
-  /* De items in deze sectie worden verticaal gestapeld */
-  background-color: black;
-  /* Achtergrondkleur van de sectie is zwart */
-  color: black;
-  /* De tekstkleur binnen deze sectie is wit */
-}
-
-main section:nth-of-type(4) h3 {
-  text-align: center;
-  /* De tekst van het h3-element wordt gecentreerd */
-  font-size: 2rem;
-  /* Het lettertype van h3 wordt ingesteld op 2rem */
-  color: white;
-}
-
-main section:nth-of-type(4) h3 span {
-  color: #ccc;
-  position: relative;
-}
-
-
-/* Door span staan letters 'expertise' ver uit elkaar, manier vinden om dit te fixen en alsnog tekst gecentreerd te houden. Voor nu even zo. */
-main section:nth-of-type(4) h3 span:nth-of-type(1) {
-  left: 0.1em;
-}
-
-main section:nth-of-type(4) h3 span:nth-of-type(3) {
-  right: 0.1em;
-}
-
-main section:nth-of-type(4) h3 span:nth-of-type(4) {
-  right: 0.2em;
-}
-
-main section:nth-of-type(4) h3 span:nth-of-type(5) {
-  right: 0.3em;
-}
-
-main section:nth-of-type(4) h3 span:nth-of-type(6) {
-  right: 0.4em;
-}
-
-main section:nth-of-type(4) h3 span:nth-of-type(7) {
-  right: 0.5em;
-}
-
-main section:nth-of-type(4) h3 span:nth-of-type(8) {
-  right: 0.6em;
-}
-
-main section:nth-of-type(4) h3 span:nth-of-type(9) {
-  right: 0.7em;
-}
-
-main section:nth-of-type(4) ul {
-  display: flex;
-  /* Flexbox wordt gebruikt voor de lijst */
-  flex-direction: column;
-  /* De lijstitems worden verticaal gestapeld */
-  gap: 1rem;
-  /* Er is een ruimte van 1rem tussen de lijstitems */
-}
-
-/* Algemene stijlen voor elk <li> in de lijst */
-main section:nth-of-type(4) ul li {
-  background-color: rgb(23, 23, 23);
-  /* Donkere achtergrondkleur */
-  padding: 1.5rem;
-  /* Ruimte rond de inhoud van het <li> */
-  border-radius: 1rem;
-  /* Afgeronde hoeken */
-  font-size: 1.5rem;
-  /* Tekstgrootte */
-  transition: all .5s;
-  /* Vloeiende overgang voor alle eigenschappen over 0.5 seconden */
-  height: auto;
-  /* De hoogte wordt automatisch aangepast op basis van de inhoud */
-  display: flex;
-  /* Flexbox wordt gebruikt voor de lay-out van het <li> */
-}
-
-/* De stijl voor de <div> binnen elk <li>, het maakt gebruik van flexbox om de inhoud te ordenen */
-main section:nth-of-type(4) ul li div {
-  display: flex;
-  /* Gebruik flexbox voor de lay-out van de <div> */
-  flex-direction: column;
-  /* De items in de <div> worden verticaal gestapeld */
-}
-
-/* De stijl voor de <button> binnen een <div> in het <li> */
-main section:nth-of-type(4) ul li div button {
-  width: fit-content;
-  /* De breedte past zich aan de inhoud aan */
-  padding: 1rem;
-  /* Binnenmarge van 1rem rondom de knop */
-  margin: 1rem 0 0 0;
-  /* Bovenmarge van 1rem */
-}
-
-/* Stijlen voor een actieve <li> (geklikt item) */
-main section:nth-of-type(4) ul li.active {
-  display: block;
-  /* Het item wordt weergegeven als block, wat de standaard is voor de meeste elementen */
-  background-color: white;
-  /* Achtergrondkleur wordt wit als het item actief is */
-  padding: 1.5rem;
-  /* Zelfde padding als voor het actieve item */
-  border-radius: 1rem;
-  /* Zelfde afgeronde hoeken */
-  height: auto;
-  /* Hoogte past zich automatisch aan op basis van de inhoud */
-  font-size: 2rem;
-  /* Grotere tekstgrootte wanneer het item actief is */
-  display: flex;
-  /* Flexbox blijft ook voor actieve items */
-  gap: 1rem;
-  /* Voegt ruimte tussen de items in het actieve <li> */
-  flex-direction: column;
-  /* Items worden verticaal gestapeld in actieve staat */
-}
-
-/* Verandert de tekstkleur van het <h4> element binnen het actieve <li> */
-main section:nth-of-type(4) ul li.active h4 {
-  color: black;
-  /* Verandert de tekstkleur naar zwart wanneer het item actief is */
-}
-
-/* De <button> in een inactief <li> wordt verborgen */
-main section:nth-of-type(4) ul li button {
-  display: none;
-  /* Het button element is verborgen in alle <li> die niet actief zijn */
-}
-
-/* Stijl voor het <h4> element in een <li> */
-main section:nth-of-type(4) ul li h4 {
-  color: white;
-  transition: .5s;
-  /* De tekstkleur is wit in een standaard <li> */
-}
-
-/* Stijl voor het <p> element in een <li>, standaard verborgen */
-main section:nth-of-type(4) ul li p {
-  display: none;
-  /* Het <p> element is verborgen in een inactief <li> */
-  font-size: 1rem;
-  /* Standaard tekstgrootte voor <p> */
-}
-
-/* Stijl voor het <p> element wanneer het <li> actief is */
-main section:nth-of-type(4) ul li.active p {
-  display: block;
-  /* Het <p> element wordt weergegeven wanneer het item actief is */
-  animation: fadeIn .5s .5s backwards;
-  /* De <p> komt in beeld met een fade-in animatie */
-  opacity: 1;
-  /* Zorgt ervoor dat de tekst volledig zichtbaar wordt */
-}
-
-/* Stijl voor de <button> binnen een actief <li>, het wordt weergegeven met animatie */
-main section:nth-of-type(4) ul li.active button {
-  display: block;
-  /* De button wordt zichtbaar wanneer het item actief is */
-  animation: fadeIn .5s .5s backwards;
-  /* De button komt in beeld met een fade-in animatie */
-  opacity: 1;
-  /* Zorgt ervoor dat de button volledig zichtbaar wordt */
-  border-radius: 10rem;
-  /* De button krijgt een afgeronde vorm */
-}
-
-/* Algemeen voor de knop in de lijst */
-main section:nth-of-type(4) ul button {
-  border-radius: 18px;
-  /* De hoeken van de knop worden afgerond */
-  padding: .5rem;
-  /* Binnenmarge rondom de knop */
-  border: none;
-  /* Geen rand rond de knop */
-  background-color: black;
-  /* Achtergrondkleur van de knop wordt zwart */
-  color: white;
-  /* De tekstkleur van de knop wordt wit */
-  font-family: var(--beige-phill);
-  /* De lettertype voor de knop is ingesteld op een variabele */
-}
-
-
-/************************/
-/* 1E PAGINA SECTION 5 TOGGLE*/
-/***********************/
-
-
-main section:nth-of-type(5) {
-  background-color: #e4e0de;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 2rem;
-  align-items: center;
-  padding: 2rem 0;
-  height: 100vh;
-}
-
-main section:nth-of-type(5) h3 {
-  font-size: 2.4rem;
-  width: 75%;
-  text-align: center;
-}
-
-main section:nth-of-type(5) h4 {
-  font-size: 1.7rem;
-  width: 70%;
-  text-align: center;
-}
-
-main section:nth-of-type(5) h3 span {
-  color: #ccc;
-  transition: .2s;
-}
-
-
-main section:nth-of-type(5) input {
-  appearance: none;
-  width: 15rem;
-  aspect-ratio: 2/1;
-  background-color: #ccc;
-  position: relative;
-  transition: .2s;
-  border-radius: 10rem;
-  transition: .2s;
-}
-
-main section:nth-of-type(5) input:checked {
-  background-color: var(--shopify-green);
-}
-
-html:has(main section:nth-of-type(5) input:checked) main section:nth-of-type(5) h3 span {
-  color: var(--shopify-green);
-}
-
-
-
-
-html:has(main section:nth-of-type(5) input:checked) main section:nth-of-type(5) a {
-  background-color: var(--shopify-green);
-}
-
-
-main section:nth-of-type(5) input::before {
-  content: "";
-  aspect-ratio: 1/1;
-  width: 5.5rem;
-  transition: .2s;
-  top: 1rem;
-  background-image: url("../images/Ask\ Phill\ -\ We\ build\ the\ next\ in\ commerce_/shopify-logo.svg");
-  background-size: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-  left: 1rem;
-  border-radius: 10rem;
-  background-color: white;
-  position: absolute;
-}
-
-main section:nth-of-type(5) a {
-  color: black;
-  padding: .5rem 1rem;
-  transition: .2s;
-  border-radius: 2rem;
-  background-color: #ccc;
-}
-
-
-main section:nth-of-type(5) input:checked::before {
-  left: 8.5rem;
-}
-
-
-/****************/
-/* 1E PAGINA SECTION 6 */
-/****************/
-
-main section:nth-of-type(6) h2 {
-  text-align: center;
-  margin: 4rem 0 2rem 0;
-}
-
-main section:nth-of-type(6) h3 {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-main section:nth-of-type(6) h3 a {
-  background-color: #d6ccb7;
-  /* Beige achtergrondkleur */
-  padding: .5rem 1rem;
-  /* Ruimte binnen de knop */
-  border-radius: 2rem;
-  /* Afgeronde hoeken */
-  font-size: .8rem;
-  /* Kleine tekstgrootte */
-  color: black;
-  /* Zwarte tekstkleur */
+	margin-top: auto;
 }
 
 main section:nth-of-type(6) ul {
-  gap: 1rem;
-  display: grid;
-  width: 100vw;
-  grid-template-columns: 33vw 33vw 33vw;
-  grid-template-rows: 30vh 35vh;
-  overflow: hidden;
+	gap: 1rem;
+	display: grid; 
+	width: 100%;
+	grid-template-columns: repeat(5,minmax(0,1fr)); 
+	grid-template-rows: repeat(2,minmax(0,1fr));
 }
 
 main section:nth-of-type(6) ul li {
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 12.5em;
-  border-radius: 1rem;
-  padding: 1rem;
-  width: 9em;
-
+	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 10em;
+	border-radius: 1rem;
+	padding: 1rem;
+	width: 7em;
 }
 
 main section:nth-of-type(6) ul li img {
-  width: 100%;
-  height: 6em;
-  object-fit: cover;
-  border-radius: 1rem;
+	width: 8em;
+	height: 6em;
+	object-fit: cover;
+	border-radius: 1rem;
+
 }
 
-main section:nth-of-type(6) ul li a {
-  font-size: 1.2rem;
-  font-weight: 600;
-}
 
-/*the good roll*/
 main section:nth-of-type(6) ul li:nth-of-type(1) {
-  background-color: #d05393;
-  color: #ffffff;
-  transform: rotate(-10deg) translateX(2rem) translateY(5rem);
-
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 2;
+	background-color: #FBF9F8;
+	color: #B892D1;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 3;
+	grid-row-end: 6;
 }
 
-/*wild ride*/
-main section:nth-of-type(6) ul li:nth-of-type(2) {
-  background-color: #CD6B45;
-  color: #fff;
-  transform: rotate(3deg);
-
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 3;
+main section:nth-of-type(6) ul li:nth-of-type(2){
+	background-color:  #CD6B45;
+	grid-column: 1/2;
+	grid-row-start: 1;
+	grid-row-end: 4;
+}
+main section:nth-of-type(6) ul li:nth-of-type(3){
+	background-color:  #FFFFFF;
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 3;
+	grid-row-end: 6;
 }
 
-/*Tony*/
-main section:nth-of-type(6) ul li:nth-of-type(3) {
-  background-color: #FFFFFF;
-  color: #2255FE;
-  transform: rotate(7deg) translateX(-2rem) translateY(6rem);
-  z-index: -1;
-
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 2;
+main section:nth-of-type(6) ul li:nth-of-type(4){
+	background-color: #2255FE;
+	grid-column-start: 4;
+	grid-column-end: 5;
+	grid-row-start: 1;
+	grid-row-end: 4;
+}
+main section:nth-of-type(6) ul li:nth-of-type(5){
+	background-color: #E6CE83;
+	grid-column-start: 5;
+	grid-column-end: 6;
+	grid-row-start: 3;
+	grid-row-end: 6;
 }
 
-/*shaping tomorrow*/
-main section:nth-of-type(6) ul li:nth-of-type(4) {
-  background-color: #2255FE;
-  color: #e7e7e7;
-  transform: rotate(-6deg) translateX(2rem) translateY(1rem);
-
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-
-/*ID&t*/
-main section:nth-of-type(6) ul li:nth-of-type(5) {
-  background-color: #E6CE83;
-  transform: rotate(-7deg) translateX(-2rem) translateY(1rem);
-  z-index: -1;
-
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
 
 main section:nth-of-type(6) ul li h3 {
-  font-size: 2rem;
+	font-size: 2rem;
 }
 
-/****************/
-/* 1E PAGINA SECTION 7 */
-/****************/
-main section:nth-of-type(7) {
-  height: 60vh;
-}
 
-main section:nth-of-type(7) ul {
-  display: flex;
-  width: 100%;
-  gap: .5rem;
-  scroll-snap-align: start;
-  margin: .5rem 0;
-  transform: translateX(-20px);
-  animation-fill-mode: both;
-  animation-timeline: view();
-	animation-duration: 1ms;
-	animation-timing-function:linear;
-}
 
-main section:nth-of-type(7) ul:nth-of-type(odd) {
-  animation-name: to-right;
-}
+@media (min-width: 786px){
 
-main section:nth-of-type(7) ul:nth-of-type(even) {
-  animation-name: to-left;
-}
-
-@keyframes to-left {
-	0% {
-		translate:0;
+	main section {
+		height: 100vh;
 	}
-	100% {
-		translate:-2em;
+
+	main section:nth-of-type(6) ul {
+		flex-direction: row;
 	}
-}
-
-@keyframes to-right {
-	0% {
-		translate:0;
-	}
-	100% {
-		translate:2em;
-	}
-}
-
-main section:nth-of-type(7) ul li {
-  height: 4rem;
-  min-width: 120px;
-  border-radius: .5rem;
-  background-color: #D8CCb5;
-  display: flex;
-  justify-content: center;
-}
-
-main section:nth-of-type(7) ul li:has(h2) {
-  background-color: transparent;
-  font-size: 2.4rem;
-  justify-content: center;
-  align-items: center;
-  min-width: fit-content;
-}
-
-main section:nth-of-type(7) ul li img {
-  width: 90%;
-  object-fit: cover;
-  object-position: center;
-}
-
-
-/****************/
-/* 1E PAGINA SECTION 8 */
-/****************/
-.infoKaartje {
-  display: flex;
-  flex-direction: column;
-  height: 72vh;
-}
-
-.infoKaartje h2 {
-  font-size: 2.5rem;
-  font-weight: 750;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.infoKaartje a {
-  background-color: #d6ccb7;
-  /* Beige achtergrondkleur */
-  padding: .5rem 1rem;
-  /* Ruimte binnen de knop */
-  border-radius: 2rem;
-  /* Afgeronde hoeken */
-  font-size: .8rem;
-  /* Kleine tekstgrootte */
-  color: black;
-  /* Zwarte tekstkleur */
-  margin: 0 auto 2rem auto;
-}
-
-.infoKaartje ul {
-  font-family: var(--phill-font);
-  background-color: #4CACC8;
-  color: #CAD7DC;
-  margin: 1em;
-  padding: 1em;
-  border-radius: 15px;
-  height: 20em;
-  width: 92vw;
-
-  display: flex;
-  flex-direction: column;
-}
-
-.infoKaartje ul li {
-  margin: 0.5em 0 1em 0;
-}
-
-.infoKaartje ul li:nth-of-type(1) {
-    display: flex;
-    justify-content: center;
-    padding: 0.6em 1em 0.6em 1em;
-    background-color: #CAD7DC;
-    border: solid 2px none;
-    border-radius: 72px;
-    margin: 0 auto 0.5em 0;
-}
-
-.infoKaartje ul li:nth-of-type(1) h3 {
-  font-size: 0.9em;
-  font-weight: 400;
-  color: #4CACC8;
-}
-
-.infoKaartje ul li:nth-of-type(2) p {
-  font-size: 1.5em;
-  font-weight: 800;
-}
-
-.infoKaartje ul li:nth-of-type(4) {
-  position: absolute;
-  right: 2em;
-  bottom: 1em;
-  rotate: -45deg;
-  border: none;
-  border-radius: 100%;
-  padding: 1.2em 0.3em;
-  background-color: #CAD7DC;
-}
-
-.infoKaartje ul li:nth-of-type(4) a {
-  background-color: #CAD7DC;
-}
-
-.infoKaartje ul li:nth-of-type(4) a img {
-  width: 3em;
-}
-
-
-
-/*------------------*/
-/* FOTO MAN MET JAS */
-/*------------------*/
-.manMetJasIMG {
-  border-radius: 25px;
-  padding: 0.6em 1em 0.6em 1em;
-}
-
-
-
-.infoKaartje2 {
-  background-color: #DDAD5C;
-  margin: 1em;
-  padding: 1em;
-  border-radius: 15px;
-  height: 20em;
-  width: 92vw;
-  color: #FFF1DA;
-}
-.infoKaartje2 ul {
-  display: flex;
-  flex-direction: column;
-}
-
-.infoKaartje2 ul li {
-  margin: 0.5em 0 1em 0;
-}
-
-.infoKaartje2 ul li:nth-of-type(1) {
-    display: flex;
-    justify-content: center;
-    padding: 0.6em 1em 0.6em 1em;
-    background-color: #FFF1DA;
-    border: solid 2px none;
-    border-radius: 72px;
-    margin: 0 auto 0.5em 0;
-}
-
-.infoKaartje2 ul li:nth-of-type(1) h3 {
-  font-size: 0.9em;
-  font-weight: 400;
-  color: #DDAD5C;
-}
-
-.infoKaartje2 ul li:nth-of-type(2) p {
-  font-size: 1.5em;
-  font-weight: 800;
-}
-
-.infoKaartje2 ul li:nth-of-type(3) {
-  position: absolute;
-  right: 2em;
-  bottom: 1em;
-  rotate: -45deg;
-  border: none;
-  border-radius: 100%;
-  padding: 1em;
-  background-color: #FFF1DA;
-}
-
-.infoKaartje2 ul li:nth-of-type(3) a img {
-  width: 3em;
-}
-
-/*--------------------*/
-/* FOTO MAN OP PODIUM */
-/*--------------------*/
-.manOpPodiumIMG {
-  border-radius: 30px;
-  padding: 0.6em 1em 0.6em 1em;
-}
-
-
-.infoKaartje3 {
-  background-color: var(--beige-phill);
-  margin: 1em;
-  padding: 1em;
-  border-radius: 20px;
-  height: 20em;
-  width: 92vw;
-}
-
-.infoKaartje3 ul li:nth-of-type(3) label {
-  border-radius: 16px;
-  
-}
-
-
-main section:nth-of-type(2) div:nth-of-type(3),
-main section:nth-of-type(2) div:nth-of-type(4) {
-  aspect-ratio: 1/1;
-  /* Vierkante vorm */
-  background-color: white;
-  /* Witte achtergrondkleur */
-  width: 10rem;
-  /* Breedte (en hoogte) van 10rem */
-  border-radius: 1rem;
-  /* Afgeronde hoeken */
-  padding: 1rem;
-  /* Interne opvulling */
-  display: flex;
-  /* Flexbox lay-out */
-  flex-direction: column;
-  /* Stapel elementen verticaal */
-}
-
-/****************/
-/* 1E PAGINA SECTION 10 */
-/****************/
-main section:nth-of-type(10) {
-  margin-bottom: 5rem;
-}
-
-main section:nth-of-type(10) ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto;
-  row-gap: 1em;
-}
- 
-main section:nth-of-type(10) ul li:nth-of-type(1) {
-  font-size: 3.1em;
- 
-  grid-row-start: 1;
-  grid-row-end: 2;
-  grid-column-start: 1;
-  grid-column-end: 7;
-}
-
-main section:nth-of-type(10) ul li:nth-of-type(2) {
-  grid-row-start: 2;
-  grid-row-end: 3;
-  grid-column-start: 4;
-  grid-column-end: 7;
-}
- 
-main section:nth-of-type(10) ul li:nth-of-type(2) {
-  font-size: 0.8em;
-  font-weight: 650;
-  color: gray;
-}
- 
-main section:nth-of-type(10) ul li:nth-of-type(3) {
-  grid-row-start: 3;
-  grid-row-end: 4;
-  grid-column-start: 1;
-  grid-column-end: 6;
-}
- 
-main section:nth-of-type(10) input,
-label {
-  border-radius: 2rem;
-  border-style: none;
-  padding: 1em 0;
-}
-
-main section:nth-of-type(10) ul li:nth-of-type(4) {
-  grid-row-start: 3;
-  grid-row-end: 4;
-  grid-column-start: 6;
-  grid-column-end: 7;
-}
- 
-main section:nth-of-type(10) ul li:nth-of-type(4) svg {
-  height: 72px;
-  width: 72px;
-  margin-top: 0.3em;
-}
- 
- 
- 
-/* 11e Sectie */
-.ready {
-  color: white;
-  background-color: black;
-  height: 55vh;
-  padding-top: 3em;
- 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
- 
-.ready p{
-  font-size: 2.4em;
-  font-weight: 700;
-  color: white;
-}
- 
-.ready p:nth-of-type(1){
-  margin-top: 2em;
-}
- 
-.ready p:nth-of-type(2){
-  font-size: 2.4em;
-  font-weight: 700;
-  color: #ccc;
-  margin-bottom: 3rem;
-}
- 
-.ready input {
-  appearance: none;
-  width: 15rem;
-  aspect-ratio: 2/1;
-  background-color: red;
-  position: relative;
-  transition: .2s;
-  border-radius: 10rem;
-  transition: .2s;
-}
- 
-.ready input:checked {
-  background-color: var(--shopify-green);
-}
- 
-.ready input::before {
-  content: "";
-  aspect-ratio: 1/1;
-  width: 5.5rem;
-  transition: .2s;
-  top: 1rem;
-  background-size: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-  left: 1rem;
-  border-radius: 10rem;
-  background-color: white;
-  position: absolute;
-}
- 
-.ready input:checked::before {
-  left: 8.5rem;
-}
- 
-.ready p:nth-of-type(3) {
-  transform: translate(1.28em, -2.2em);
-}
- 
-.ready p:nth-of-type(4) {
-  transform: translate(-1.28em, -3.4em);
-}
-
-
-
-
-@media (min-width: 786px) {
-
-  main section:nth-of-type(2) h2 {
-    font-size: 6.5rem;
-    /* Het lettertype van h2 wordt groter bij schermen breder dan 786px */
-    width: 55%;
-    /* De breedte van het h2-element wordt ingesteld op 55% van de sectie */
-    line-height: 6rem;
-    /* De lijnhoogte van de h2 wordt vergroot naar 6rem */
-  }
-
-  main section:nth-of-type(2) div:nth-of-type(2) {
-    right: 8rem;
-    /* Het tweede div-element in de tweede sectie wordt 8rem van de rechterkant geplaatst */
-    top: 8rem;
-    /* Het tweede div-element wordt 8rem van de bovenkant van de sectie geplaatst */
-  }
-
-  main section:nth-of-type(2) div:nth-of-type(2) h3 {
-    display: flex;
-    /* Flexbox wordt toegepast op h3 voor een horizontale lay-out */
-    align-items: center;
-    /* De elementen binnen h3 worden verticaal uitgelijnd in het midden */
-    justify-content: center;
-    /* De elementen binnen h3 worden horizontaal in het midden uitgelijnd */
-    gap: 7rem;
-    /* Er wordt 7rem ruimte tussen de items in h3 */
-    font-size: 1rem;
-    /* Het lettertype van h3 wordt kleiner (1rem) */
-  }
-
-  main section:nth-of-type(2) div:nth-of-type(2) h4 {
-    font-size: 3rem;
-    /* Het lettertype van h4 wordt groter (3rem) */
-  }
-
-  main section:nth-of-type(2) div:nth-of-type(2) h3 i {
-    background-color: black;
-    /* De achtergrondkleur van het icoon wordt zwart */
-    aspect-ratio: 1/1;
-    /* Het icoon behoudt een vierkante verhouding */
-    width: 2rem;
-    /* De breedte van het icoon wordt 2rem */
-    border-radius: 3rem;
-    /* De hoeken van het icoon worden afgerond naar 3rem */
-    color: white;
-    /* De kleur van het icoon wordt wit */
-    text-align: center;
-    /* De tekst in het icoon wordt gecentreerd */
-    display: flex;
-    /* Flexbox wordt gebruikt voor de uitlijning van de inhoud binnen het icoon */
-    align-items: center;
-    /* Het icoon wordt verticaal gecentreerd */
-    justify-content: center;
-    /* Het icoon wordt horizontaal gecentreerd */
-  }
-
-  main section:nth-of-type(3) {
-    flex-direction: row;
-    /* De flexbox in de derde sectie wordt van verticaal (default) naar horizontaal ingesteld */
-  }
-
-  main section:nth-of-type(3) ul {
-    margin: 0;
-    /* De margin van de lijst wordt op 0 gezet */
-  }
-
-  main section:nth-of-type(3)>div {
-    flex-direction: column;
-    /* De flexbox in div wordt opnieuw ingesteld naar een verticale richting */
-    justify-content: flex-start;
-    /* De inhoud in de div wordt bovenaan uitgelijnd */
-  }
-
-  main section {
-    height: 100vh;
-  }
-
-  main section:nth-of-type(6) ul {
-    flex-direction: row;
-  }
-
-  main section:nth-of-type(6) ul li:nth-of-type(1),
-  main section:nth-of-type(6) ul li:nth-of-type(3) {
-    rotate: 20deg;
-  }
-
-  main section:nth-of-type(6) ul li:nth-of-type(2),
-  main section:nth-of-type(6) ul li:nth-of-type(4) {
-    rotate: -20deg;
-  }
-
-  main section:nth-of-type(2) div:nth-of-type(3),
-  main section:nth-of-type(2) div:nth-of-type(4) {
-    width: 15rem;
-  }
-
-
-  main section:nth-of-type(3)>div {
-    align-items: flex-start;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  main section:nth-of-type(3)>div a {
-    font-size: 1.5rem;
-  }
-
-  main section:nth-of-type(3)>div h3 {
-    font-size: 5rem;
-    line-height: 4rem;
-    width: 40%;
-    text-align: left;
-  }
-
-  main section:nth-of-type(3) {
-    padding: 2rem;
-    overflow: hidden;
-  }
-
-  main section:nth-of-type(3) ul {
-    margin-top: 5rem;
-  }
-
-  main section:nth-of-type(3) ul li {
-    width: 32rem;
-  }
-
-  main section:nth-of-type(3) ul li:nth-of-type(2) {
-    transform: translateY(-15rem);
-  }
-
-  main section:nth-of-type(3) ul li:nth-of-type(3) {
-    transform: translateY(-30rem);
-  }
-
-  /* Wanneer het <li> actief is, zet de flex-direction op row en verhoog de gap */
-  main section:nth-of-type(4) ul li.active {
-    flex-direction: row;
-    /* Items worden horizontaal geplaatst in plaats van verticaal */
-    gap: 20rem;
-    /* Grote ruimte tussen de items */
-  }
-
-  /* Wanneer het scherm kleiner is, stel de lettergrootte van <h3> in */
-  main section:nth-of-type(4) h3 {
-    font-size: 5rem;
-    /* Verhoog de tekstgrootte van <h3> voor kleine schermen */
-  }
-
-  /* Grotere tekst voor de <h4> binnen een actief <li> op kleinere schermen */
-  main section:nth-of-type(4) ul li.active h4 {
-    font-size: 3rem;
-    /* Verhoog de tekstgrootte voor de actieve <h4> */
-  }
-
-  /* Zorg ervoor dat de <div> binnen een <li> in een kolom blijft */
-  main section:nth-of-type(4) ul li div {
-    flex-direction: column;
-    /* Blijf kolomrichting gebruiken voor de flexbox, ook op kleinere schermen */
-  }
-}
-
-
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-
-span {
-  display: inline-block;
-  opacity: 0;
-  margin: 0;
-}
-
-span:nth-child(1) {
-  animation: pop 1s 100ms ease forwards;
-}
-
-span:nth-child(2) {
-  animation: pop 1s 200ms ease forwards;
-}
-
-span:nth-child(3) {
-  animation: pop 1s 300ms ease forwards;
-}
-
-span:nth-child(4) {
-  animation: pop 1s 400ms ease forwards;
-}
-
-span:nth-child(5) {
-  animation: pop 1s 500ms ease forwards;
-}
-
-span:nth-child(6) {
-  animation: pop 1s 600ms ease forwards;
-}
-
-span:nth-child(7) {
-  animation: pop 1s 700ms ease forwards;
-}
-
-span:nth-child(8) {
-  animation: pop 1s 800ms ease forwards;
-}
-
-span:nth-child(9) {
-  animation: pop 1s 900ms ease forwards;
-}
-
-
-@keyframes pop {
-  0% {
-    opacity: 0;
-    transform: translateY(0.5em);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-      /*------------------------*/
-    /*------------------------*/
-    /* - Tweede pagina blog- */
-    /*-----------------------*/
-      /*------------------------*/
-    
-.blog main svg {
-position: absolute;
-/* Positionering binnen de sectie */
-z-index: 0;
-/* Zorgt ervoor dat het logo boven de video wordt weergegeven */
-width: 5rem;
-/* Breedte van het logo */
-top: 1rem;
-/* Afstand vanaf de bovenkant van de sectie */
-left: 50%;
-/* Horizontale centrering */
-transform: translateX(-50%);
-/* Precisiecentrering met translate */
-text-align: center;
-}
-
-/* filter nav bar */
-.blog main section:nth-of-type(1) {
-  height: auto;
-
-}
-
-.blog main section:nth-of-type(1) ul {
-  display: flex;
-  overflow: auto;
-  gap: .5em;
-  
-}
-
-.blog main section:nth-of-type(1) li {
-  flex-shrink: 0;
-}
-
-.blog main section:nth-of-type(1) label:has(input:checked) {
-  background-color: black;
-  color: white;
-}
-
-    /*------------------------*/
-    /*------------------------*/
-    /* - filter---------------*/
-    /*-----------------------*/
-      /*------------------------*/
-
-.blog main section:nth-of-type(1):has([value="Shopify"]:checked) a:not( [data-category="Shopify"] ),
-.blog main section:nth-of-type(1):has([value="Strategy"]:checked) a:not( [data-category="Strategy"] ), 
-.blog main section:nth-of-type(1):has([value="NXT Summit"]:checked) a:not( [data-category="NXT Summit"] ), 
-.blog main section:nth-of-type(1):has([value="Shopify Plus"]:checked) a:not( [data-category="Shopify Plus"] ), 
-.blog main section:nth-of-type(1):has([value="Shopify Hydrogen"]:checked) a:not( [data-category="Shopify Hydrogen"] ), 
-.blog main section:nth-of-type(1):has([value="Headless"]:checked) a:not( [data-category="Headless"] ), 
-.blog main section:nth-of-type(1):has([value="Shopify POS"]:checked) a:not( [data-category="Shopify POS"] ), 
-.blog main section:nth-of-type(1):has([value="Creative"]:checked) a:not( [data-category="Creative"] ) {
-  display:none;
-}
-
-.blog label input:has([value=Shopify]:checked) ~ .blog section:nth-of-type(2) {
-  display: none;
-}
-
-
-   /*-------------------------------*/
-    /*-------------------------------*/
-    /*-- Styling van de blog berichten--*/
-    /*----------------------------------*/
-      /*--------------------------------*/
-
-
-.blog main section:nth-of-type(1) a article {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto;
-  width: 90vw;
-  margin: 1rem;
-  border-radius: 12px;
-}
-
-.blog main section:nth-of-type(1) a article img {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 4;
-
-  border-radius: 12px;
-  aspect-ratio: 1/1;
-  margin: 0.6em;
-  
-}
-
-.blog main section:nth-of-type(1) a article h3 {
-  margin: 0.6em 0.6em 0.6em 1em
-}
-
-.blog main section:nth-of-type(1) a article p {
-  margin: 0.6em 0.6em 0.6em 1em;
-}
-
-.blog main section:nth-of-type(1) a:nth-of-type(1) article {
-  background-color:#95B7C1;
-}
-
-.blog main section:nth-of-type(1) a:nth-of-type(1) article p {
-  color: #95B7C1;
-
-}
-
-.blog main section:nth-of-type(1) a:nth-of-type(1) p:nth-of-type(1) {
-  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
-  margin: auto;
-  border-radius: 72px;
-  background-color: #035D78;
-}
-.blog main section:nth-of-type(1) a:nth-of-type(1) h2 {
-  color: #035D78;
-  margin: 1em;
-}
-.blog main section:nth-of-type(1) a:nth-of-type(1) p:nth-of-type(2) {
-  color: #5689AD;
-}
-
-.blog main section:nth-of-type(1) a:nth-of-type(2) article {
-  background-color: #E8A42F;
-}
-
-.blog main section:nth-of-type(1) a:nth-of-type(2) article p {
-  color: #E8A42F;
-
-}
-
-.blog main section:nth-of-type(1) a:nth-of-type(2) p:nth-of-type(1) {
-  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
-  margin: auto;
-  border-radius: 72px;
-  background-color: #F6DBAC;
-}
-
-.blog main section:nth-of-type(1) a:nth-of-type(2) h3 {
-  color: #F6DBAC;
-}
-
-.blog main section:nth-of-type(1) a:nth-of-type(2) p:nth-of-type(2) {
-  color: #EFBF73; 
-}
-.blog main section:nth-of-type(1) a:nth-of-type(3) article {
-  background-color: #CECECE;
-}
-
-.blog main section:nth-of-type(1) a:nth-of-type(4) article {
-  background-color: #9DC177;
-}
-
-.blog main section:nth-of-type(1) a:nth-of-type(4) article {
-  background-color: #246BFF;
-}
-
-.blog main section:nth-of-type(1) a:nth-of-type(5) article {
-  background-color: #886494;
-}
-
-.blog main section:nth-of-type(1) a:nth-of-type(6) article {
-  background-color: #D9D9D9;
-}
-
-.blog main section:nth-of-type(1) a:nth-of-type(7) article {
-  background-color: #BEBEBE;
-}
-
-.blog main section:nth-of-type(1) a:nth-of-type(8) article {
-  background-color: #AFC7D8;
-}
-
-.blog main section:nth-of-type(1) a:nth-of-type(9) article {
-  background-color: #AFC7D8;
-}
-
 
-
-.blog main section:nth-of-type(1) a:nth-of-type(3) p:nth-of-type(1) {
-  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
-  margin: auto;
-  border-radius: 72px;
-  background-color: #3131FD;
-}
-
-.blog main section:nth-of-type(2) {
-  height: auto;
-  margin: 6rem 0;
-  padding: 1rem;
-  border-radius: 60px;
-}
-
-.Reclame {
-  position: relative;
-  height: 40vh;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  margin: 7em 0;
-
-  font-size: 0.9em;
-}
-
-/* TOGGLE BUTTON PAGINA 2 */
-
-.Reclame input {
-  appearance: none;
-  width: 6rem;
-  aspect-ratio: 3.1/1.4;
-  background-color: red;
-  position: relative;
-  transition: .2s;
-  border-radius: 10rem;
-  transition: .2s;
-}
-
-
-.Reclame input:checked {
-  background-color: var(--shopify-green);
-}
- 
-.Reclame input::before {
-  content: "";
-  aspect-ratio: 1/1;
-  width: 2rem;
-  transition: .2s;
-  top: 0.3rem;
-  background-size: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-  left: 0.5rem;
-  border-radius: 10rem;
-  background-color: white;
-  position: absolute;
-}
- 
-.Reclame input:checked::before {
-  left: 3.6rem;
-}
-
-   /*-------------------------------*/
-    /*-------------------------------*/
-    /*-- Styling van de berichten onderaan de pagina--*/
-    /*----------------------------------*/
-      /*--------------------------------*/
-
-
-
-.blog main section:nth-of-type(3) ul {
-  height: auto;
-}
- 
-.blog main section:nth-of-type(3) ul li {
-  background-color: #E2E1E0;
-  transform: translate(0);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto;
-  width: 90vw;
-  margin: 1rem;
-  border-radius: 12px;
-
-}
-
-.blog main section:nth-of-type(3) ul li a img {
-  border-radius: 45px;
-  aspect-ratio: 1/1;
-  margin: 9em;
-  position: absolute;
-  right: 2em;
-  bottom: 3.1em;
-  border: none;
-  padding: 2.1em;
-  
-}
-
-
-
-
-
-/*------------*/
-/* - Footer - */
-/*------------*/
-
-footer a {
-  color: #9a9a9a;
-  font-weight: 600;
-}
-
-footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-  gap: 3rem;
-  background-color: #000;
-  color: #fff;
-  padding: 3rem 0 2rem 0;
-}
-
-footer ul:nth-of-type(1) {
-  grid-column-start: 1;
-  grid-column-end: 2;
-
-  grid-row-start: 1;
-  grid-row-end: 2;
-
-  margin: 0 0 0 1rem;
-}
-
-footer ul:nth-of-type(1) li {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 0.8rem;
-}
-
-footer p:nth-of-type(1) {
-  grid-column-start: 2;
-  grid-column-end: 3;
-
-  grid-row-start: 1;
-  grid-row-end: 2;
-
-  font-size: 1.25rem;
-  font-weight: 700;
-}
-
-footer a {
-  grid-column-start: 2;
-  grid-column-end: 3;
-
-  grid-row-start: 1;
-  grid-row-end: 2;
-
-  margin-top: 4rem;
-}
-
-footer ul:nth-of-type(2) {
-  grid-column-start: 2;
-  grid-column-end: 3;
-
-  grid-row-start: 2;
-  grid-row-end: 3;
-
-  margin-top: 0;
-
-  display: flex;
+	main section:nth-of-type(6) ul li:nth-of-type(1),
+	main section:nth-of-type(6) ul li:nth-of-type(3) {
+	rotate: 20deg;
 }
-
-footer ul:nth-of-type(2) li {
-  margin-right: 1.5rem;
-}
-
-footer ul:nth-of-type(4) {
-  grid-column-start: 1;
-  grid-column-end: 2;
-
-  grid-row-start: 2;
-  grid-row-end: 3;
-
-  margin: 0 0 0 1rem;
-
-  display: flex;
-  flex-direction: column;
-}
-
-footer ul:nth-of-type(2) li a {
-  margin-top: 0;
-}
-
-footer svg {
-  height: 14px;
-  width: 14px;
-}
-
-footer ul:nth-of-type(3) {
-  grid-column-start: 2;
-  grid-column-end: 3;
-
-  grid-row-start: 2;
-  grid-row-end: 3;
-
-  margin: 3rem 0;
+	main section:nth-of-type(6) ul li:nth-of-type(2),
+	main section:nth-of-type(6) ul li:nth-of-type(4) {
+	rotate: -20deg;
 }
 
-footer ul:nth-of-type(3) li a {
-  font-size: 0.8rem;
-  font-weight: 500;
 }
-
-footer p:nth-of-type(2) {
-  grid-column-start: 2;
-  grid-column-end: 3;
 
-  grid-row-start: 2;
-  grid-row-end: 3;
-
-  align-self: end;
-
-  color: #9a9a9a;
-  font-size: 0.55rem;
-}
