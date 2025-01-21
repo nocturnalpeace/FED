@@ -1760,9 +1760,12 @@ text-align: center;
   color: #035D78;
   margin: 1em;
 }
+
+/* ondertitel bij blogs */
 .blog main section:nth-of-type(1) a:nth-of-type(1) p:nth-of-type(2) {
   color: #5689AD;
 }
+
 
 .blog main section:nth-of-type(1) a:nth-of-type(2) article {
   background-color: #E8A42F;
@@ -1770,7 +1773,6 @@ text-align: center;
 
 .blog main section:nth-of-type(1) a:nth-of-type(2) article p {
   color: #E8A42F;
-
 }
 
 .blog main section:nth-of-type(1) a:nth-of-type(2) p:nth-of-type(1) {
@@ -1780,6 +1782,7 @@ text-align: center;
   background-color: #F6DBAC;
 }
 
+/* styling titel woorden van de filter tags bij de berichten */
 .blog main section:nth-of-type(1) a:nth-of-type(2) h3 {
   color: #F6DBAC;
 }
@@ -1787,8 +1790,23 @@ text-align: center;
 .blog main section:nth-of-type(1) a:nth-of-type(2) p:nth-of-type(2) {
   color: #EFBF73; 
 }
+
 .blog main section:nth-of-type(1) a:nth-of-type(3) article {
   background-color: #CECECE;
+}
+
+/* ondertitel bij shopify */
+
+.blog main section:nth-of-type(1) a:nth-of-type(3) article p {
+  color: #CECECE;
+}
+
+.blog main section:nth-of-type(1) a:nth-of-type(3) h3 {
+  color: rgb(52, 51, 51);
+}
+
+.blog main section:nth-of-type(1) a:nth-of-type(3) p:nth-of-type(2) {
+  color: #75787a;
 }
 
 .blog main section:nth-of-type(1) a:nth-of-type(4) article {
@@ -1796,15 +1814,15 @@ text-align: center;
 }
 
 .blog main section:nth-of-type(1) a:nth-of-type(4) article {
-  background-color: #246BFF;
+  background-color: #9DC177;
 }
 
 .blog main section:nth-of-type(1) a:nth-of-type(5) article {
-  background-color: #886494;
+  background-color: #246BFF;
 }
 
 .blog main section:nth-of-type(1) a:nth-of-type(6) article {
-  background-color: #D9D9D9;
+  background-color: #886494;
 }
 
 .blog main section:nth-of-type(1) a:nth-of-type(7) article {
@@ -1816,17 +1834,57 @@ text-align: center;
 }
 
 .blog main section:nth-of-type(1) a:nth-of-type(9) article {
-  background-color: #AFC7D8;
+  background-color: #BEBEBE;
 }
 
+/* Eerste sectie met tweede deel van blog berichten*/
 
-
+/* filter tag shopify styling*/
 .blog main section:nth-of-type(1) a:nth-of-type(3) p:nth-of-type(1) {
   padding: 0.2rem 0.5rem 0.2rem 0.5rem;
   margin: auto;
   border-radius: 72px;
   background-color: #3131FD;
 }
+
+/* filter tag summit styling*/
+.blog main section:nth-of-type(1) a:nth-of-type(4) p:nth-of-type(1) {
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  margin: auto;
+  border-radius: 72px;
+  background-color: #DEDEDE;
+}
+
+/* filter tag summit styling*/
+.blog main section:nth-of-type(1) a:nth-of-type(5) p:nth-of-type(1) {
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  margin: auto;
+  border-radius: 72px;
+  background-color: #E1E1E1;
+}
+
+/* filter tag strategy styling*/
+.blog main section:nth-of-type(1) a:nth-of-type(7) p:nth-of-type(1) {
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  margin: auto;
+  border-radius: 72px;
+  background-color: #203345;
+}
+
+.blog main section:nth-of-type(1) a:nth-of-type(8) p:nth-of-type(1) {
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  margin: auto;
+  border-radius: 72px;
+  background-color: #E1E1E1;
+}
+
+.blog main section:nth-of-type(1) a:nth-of-type(9) p:nth-of-type(1) {
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  margin: auto;
+  border-radius: 72px;
+  background-color: #080808;
+}
+
 
 .blog main section:nth-of-type(2) {
   height: auto;
