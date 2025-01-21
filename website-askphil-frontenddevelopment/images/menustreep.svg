@@ -1,0 +1,3 @@
+<svg class="absolute size-[18px] place-self-center text-[--color] transition-colors duration-300 lg:size-[25px]" aspectratio="xMidYMid meet" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 8H24M0 17H24" stroke="currentColor" stroke-width="3.5"></path>
+      </svg>
