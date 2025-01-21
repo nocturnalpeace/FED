@@ -1745,7 +1745,7 @@ text-align: center;
   background-color:#95B7C1;
 }
 
-.blog main section:nth-of-type(1) a:nth-of-type(1) article p {
+.blog main section:nth-of-type(1) a:nth-of-type(4) article p {
   color: #95B7C1;
 
 }
@@ -1785,29 +1785,85 @@ text-align: center;
 /* styling titel woorden van de filter tags bij de berichten */
 .blog main section:nth-of-type(1) a:nth-of-type(2) h3 {
   color: #F6DBAC;
+  font-size: 1.5em
 }
 
 .blog main section:nth-of-type(1) a:nth-of-type(2) p:nth-of-type(2) {
-  color: #EFBF73; 
+  color: #739aef; 
+
 }
 
 .blog main section:nth-of-type(1) a:nth-of-type(3) article {
   background-color: #CECECE;
 }
 
+.blog main section:nth-of-type(1) a:nth-of-type(4) article p:nth-of-type(1) {
+  color: #9DC177;
+
+}
+
+.blog main section:nth-of-type(1) a:nth-of-type(5) article p:nth-of-type(1) {
+  color: #246BFF;
+
+}
+
+.blog main section:nth-of-type(1) a:nth-of-type(7) article p:nth-of-type(1) {
+  color: #BEBEBE;
+
+}
+
+.blog main section:nth-of-type(1) a:nth-of-type(8) article p:nth-of-type(1) {
+  color: #7a7a7a;
+
+}
+
+.blog main section:nth-of-type(1) a:nth-of-type(9) article p:nth-of-type(1) {
+  color: #e4e3e3;
+
+}
+
+
 /* ondertitel bij shopify */
 
 .blog main section:nth-of-type(1) a:nth-of-type(3) article p {
-  color: #CECECE;
+  color: #7e7777;
 }
 
 .blog main section:nth-of-type(1) a:nth-of-type(3) h3 {
-  color: rgb(52, 51, 51);
+  color: #3131FD;
+  font-size: 1.5em;
 }
 
-.blog main section:nth-of-type(1) a:nth-of-type(3) p:nth-of-type(2) {
-  color: #75787a;
+.blog main section:nth-of-type(1) a:nth-of-type(4) h3 {
+  color: #DEDEDE;
+  font-size: 1.5em;
 }
+
+.blog main section:nth-of-type(1) a:nth-of-type(5) h3 {
+  color: #DEDEDE;
+  font-size: 1.5em;
+}
+
+.blog main section:nth-of-type(1) a:nth-of-type(6) h3 {
+  color: #D8CBB4;
+  font-size: 1.5em;
+}
+
+.blog main section:nth-of-type(1) a:nth-of-type(7) h3 {
+  color: #203345;
+  font-size: 1.5em;
+}
+
+.blog main section:nth-of-type(1) a:nth-of-type(8) h3 {
+  color: #080808;
+  font-size: 1.7em;
+}
+
+B198A4
+BEBEBE
+636363
+
+/* kleur achtergrond blog berichten */
 
 .blog main section:nth-of-type(1) a:nth-of-type(4) article {
   background-color: #9DC177;
@@ -1830,14 +1886,15 @@ text-align: center;
 }
 
 .blog main section:nth-of-type(1) a:nth-of-type(8) article {
-  background-color: #AFC7D8;
+  background-color: #BEBEBE;
 }
 
 .blog main section:nth-of-type(1) a:nth-of-type(9) article {
   background-color: #BEBEBE;
 }
-
+/* ------------------------------------------------- */
 /* Eerste sectie met tweede deel van blog berichten*/
+/* -------------------------------------------------- */
 
 /* filter tag shopify styling*/
 .blog main section:nth-of-type(1) a:nth-of-type(3) p:nth-of-type(1) {
