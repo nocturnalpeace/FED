@@ -35,4 +35,8 @@ listItems.forEach((item) => {
   });
 });
 
+const nieuwsbriefdialog = document.querySelector("nieuwsbriefdialog")
+nieuwsbriefdialog.show() // Opens a non-modal dialog
+nieuwsbriefdialog.showModal() // Opens a modal
+
 
